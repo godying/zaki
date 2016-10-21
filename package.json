@@ -1,0 +1,26 @@
+{
+  "name": "zaki",
+  "version": "1.0.0",
+  "description": "zaki's project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linxiaoziruo/zaki.git"
+  },
+  "keywords": [
+    "zaki"
+  ],
+  "author": "zaki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linxiaoziruo/zaki/issues"
+  },
+  "homepage": "https://github.com/linxiaoziruo/zaki#readme",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "proxy-middleware": "^0.15.0"
+  }
+}
