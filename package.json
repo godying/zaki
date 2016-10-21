@@ -2,9 +2,9 @@
   "name": "zaki",
   "version": "1.0.0",
   "description": "zaki's project",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=development NODE_PATH=./server/middlewares nodemon",
+    "prod": "NODE_ENV=production NODE_PATH=./server/middlewares node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,21 @@
   },
   "homepage": "https://github.com/linxiaoziruo/zaki#readme",
   "devDependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "config": "^1.21.0",
+    "ejs": "^2.5.2",
     "express": "^4.14.0",
-    "proxy-middleware": "^0.15.0"
+    "express-handlebars": "^3.0.0",
+    "html-webpack-harddisk-plugin": "0.0.2",
+    "html-webpack-plugin": "^2.24.0",
+    "http": "0.0.0",
+    "lodash": "^4.16.4",
+    "log4js": "^0.6.38",
+    "morgan": "^1.7.0",
+    "proxy-middleware": "^0.15.0",
+    "response-time": "^2.3.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
   }
 }

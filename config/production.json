@@ -1,0 +1,36 @@
+{
+  "app": {
+    "port": 80,
+    "debug": true,
+    "name": "BOSS-dev",
+    "host": "127.0.0.1",
+    "cookie": "BOSSID",
+    "nodePath": "node"
+  },
+  "debug": {
+    "port": 80,
+    "host": "www.mrzaki.com"
+  },
+  "log4js": {
+    "appenders": [{
+      "type": "console"
+    }, {
+      "type": "dateFile",
+      "filename": "./logs/log",
+      "pattern": "-yyyy-MM-dd.log",
+      "alwaysIncludePattern": true,
+      "category": "info"
+    }, {
+      "type": "dateFile",
+      "filename": "./logs/error",
+      "pattern": "-yyyy-MM-dd.log",
+      "alwaysIncludePattern": true,
+      "category": "error"
+    }],
+    "levels": {
+      "info": "INFO",
+      "error": "ERROR"
+    },
+    "replaceConsole" : true
+  }
+}
