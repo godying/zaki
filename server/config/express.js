@@ -27,7 +27,7 @@ module.exports = function(app) {
     app.engine('html', ejs.__express);
     app.set('view engine', 'html');
     app.set('views', path.join(__dirname, '../../', 'client'));
-    app.use('/oa/static', express.static('client'));
+    app.use('/zaki/static', express.static('client'));
 
     app.use(require('compression')());
     app.use(require('response-time')());
