@@ -1,6 +1,6 @@
 {
   "app": {
-    "port": 80,
+    "port": 8000,
     "debug": true,
     "name": "zaki",
     "host": "www.mrzaki.com",
