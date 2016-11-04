@@ -2,7 +2,7 @@
     "app": {
         "port": 80,
         "debug": true,
-        "name": "BOSS-dev",
+        "name": "zaki",
         "host": "127.0.0.1",
         "cookie": "BOSSID",
         "nodePath": "node"
