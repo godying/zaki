@@ -7,13 +7,12 @@
 var path = require("path");
 var fs = require("fs");
 var onFinished = require('on-finished');
-var proxy = require('proxy-middleware');
 var url = require('url');
 var express = require('express');
 var config = require('config');
 var ejs = require('ejs');
-
-var NotFoundError = require('errors/NotFoundError');
+var debug = require('debug')('app:' + process.pid);
+var NotFoundError = require('../errors/NotFoundError');
 var http_port = config.get('app.port');
 
 module.exports = function(app) {
@@ -27,8 +26,8 @@ module.exports = function(app) {
 
     app.engine('html', ejs.__express);
     app.set('view engine', 'html');
-    app.set('views', path.join(__dirname, '..', 'views'));
-    app.use('/oa/static', express.static('server/views'));
+    app.set('views', path.join(__dirname, '../../', 'client'));
+    app.use('/oa/static', express.static('client'));
 
     app.use(require('compression')());
     app.use(require('response-time')());
@@ -40,11 +39,8 @@ module.exports = function(app) {
         next();
     });
 
-    // 对于静态资源的配置
-    app.use('/assets', proxy(url.parse('http://localhost:80/assets')));
-
     app.get('/', function(req, res, next) {
-        console.log('根地址请求')
+        console.log('根地址请求');
     });
 
     // Bootstrap routes（可以添加各个版本不同的路由）
