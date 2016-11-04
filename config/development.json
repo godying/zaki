@@ -1,6 +1,6 @@
 {
     "app": {
-        "port": 8002,
+        "port": 80,
         "debug": true,
         "name": "BOSS-dev",
         "host": "127.0.0.1",
